@@ -1,1 +1,225 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Creative Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f3ff;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: white;
+        }
+
+        nav h2 {
+            color: #7c3aed;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 20px;
+        }
+
+        /* Hero banner */
+        .hero {
+            min-height: 550px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(rgba(76, 29, 149, 0.65),
+                                rgba(124, 58, 237, 0.65)),
+                url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            color: white;
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Button with hover */
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: white;
+            color: #7c3aed;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            background: #ede9fe;
+        }
+
+        /* Glassmorphism */
+        .glass-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #7c3aed, #ec4899);
+        }
+
+        .glass-card {
+            max-width: 600px;
+            margin: auto;
+            padding: 45px;
+            border-radius: 20px;
+
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            border: 1px solid rgba(255,255,255,0.4);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+        }
+
+        .glass-card h2 {
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .glass-card p {
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Color palette cards */
+        .palette {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .palette h2 {
+            margin-bottom: 30px;
+            color: #7c3aed;
+        }
+
+        .colors {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .color-card {
+            width: 150px;
+            padding: 25px 10px;
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+
+        .color-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .purple { background: #7c3aed; }
+        .pink { background: #ec4899; }
+        .blue { background: #3b82f6; }
+        .dark { background: #312e81; }
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #312e81;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            nav {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Creative Space</h2>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#palette">Colors</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to My Creative Space</h1>
+            <p>Discover a world of colors, creativity and modern design.</p>
+            <a href="#about" class="btn">Explore More</a>
+        </div>
+    </section>
+
+    <section class="palette" id="palette">
+        <h2>My Color Palette</h2>
+
+        <div class="colors">
+            <div class="color-card purple">Purple</div>
+            <div class="color-card pink">Pink</div>
+            <div class="color-card blue">Blue</div>
+            <div class="color-card dark">Dark Blue</div>
+        </div>
+    </section>
+
+    <section class="glass-section" id="about">
+        <div class="glass-card">
+            <h2>Glassmorphism Design</h2>
+            <p>
+                This section uses a modern glass effect.
+                The transparent background and blur filter
+                create a beautiful frosted glass appearance.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>My First Website | Created with HTML and CSS</p>
+    </footer>
+
+</body>
+</html>
+
